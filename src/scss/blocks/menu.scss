@@ -1,0 +1,9 @@
+.menu{
+    display: flex;
+    flex-direction: row;
+    font-family: var(--font-text);
+    color:var(--color-primary);
+    font-size: 14px;
+    align-items: center;
+    gap:15px;
+}

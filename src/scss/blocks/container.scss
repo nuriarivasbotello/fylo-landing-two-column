@@ -1,0 +1,9 @@
+@use '../mixins/responsive.scss' as *;
+.container{
+    align-items: center;
+    @include responsive(desktop) {
+        padding-top:150px;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+}

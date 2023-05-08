@@ -1,1 +1,10 @@
-
+@use '../mixins/responsive.scss' as *;
+.paragraph{
+    color:var(--color-primary);
+    font-family: var(--font-text);
+    text-align: center;
+    font-size: 20px;
+    @include responsive(desktop) {
+        text-align: left;
+    }
+}

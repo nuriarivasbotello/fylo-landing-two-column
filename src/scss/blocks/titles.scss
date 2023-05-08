@@ -1,1 +1,12 @@
-
+@use '../mixins/responsive.scss' as *;
+.title{
+    color:var(--color-primary);
+    font-family: var(--font-text);
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    @include responsive(desktop) {
+        text-align:left;
+        padding-right:40px;
+    }
+}
