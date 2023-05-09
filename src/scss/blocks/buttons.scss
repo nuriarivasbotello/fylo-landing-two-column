@@ -20,8 +20,21 @@
   .box{
     padding-left:10px;
     color:gray;
+    background-color: white;
     border: 1px black solid;
     @include responsive(desktop) {
       width: 320px;
+    }
+  }
+  .button-email{
+    @include responsive(desktop) {
+    width: 480px;
+  }
+}
+  .button-primary-large{
+    @include responsive(desktop) {
+      width: 200px;
+      margin-right:280px;
+      
     }
   }

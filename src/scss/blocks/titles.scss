@@ -14,3 +14,10 @@
     margin-top:50px;
     font-size: 20px;
 }
+.title-early{
+    font-size:20px;
+    color:white;
+    @include responsive(desktop) {
+      padding-left:40px;
+    }
+}

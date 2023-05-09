@@ -1,4 +1,10 @@
+@use '../mixins/responsive.scss' as *;
 .early-access{
-    background-color:var(--color-box-bottom);
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include responsive(desktop) {
+        width: 533px;
+        padding: 20px 50px;
+    }
 }

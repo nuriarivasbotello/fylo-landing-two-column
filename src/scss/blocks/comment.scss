@@ -1,0 +1,15 @@
+@use '../mixins/responsive.scss' as *;
+.comment{
+    padding:40px 0;
+    position: relative;
+        bottom:100px;
+    background-color: var(--color-box-bottom);
+    @include responsive(desktop) {
+        width: 1440px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+        bottom:100px;
+    }
+}

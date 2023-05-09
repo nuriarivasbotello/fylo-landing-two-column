@@ -1,0 +1,10 @@
+.about-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
+    margin-bottom:20px;
+    color:white;
+    font-family: var(--font-text);
+    font-size: 15px;
+}

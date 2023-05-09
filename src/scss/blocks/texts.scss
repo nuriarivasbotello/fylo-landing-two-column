@@ -19,17 +19,40 @@ font-family:var(--font-title);
     margin:auto;
     font-family:var(--font-title);
     font-size: 15px;
+    padding-left:100px;
     &::before{
-        @include pseudo(400px, 200px){
+        @include pseudo(400px, 100px){
             color: var(--color-link);
         }
      }
     &::after{
         @include pseudo(400px, 100px){
-            top:1419px;
-            left:285px;
+            top:1340px;
+            left:270px;
              background-repeat: no-repeat;
              background-image: url(../assets/images/icon-arrow.svg);
         }
      }
+     @include responsive(desktop) {
+        text-align: left;
+        &::before{
+            @include pseudo(400px, 200px){
+                color: var(--color-link);
+            }
+         }
+        &::after{
+            @include pseudo(400px, 100px){
+                top:1100px;
+                left:370px;
+                 background-repeat: no-repeat;
+                 background-image: url(../assets/images/icon-arrow.svg);
+            }
+         }
+    }
+}
+.paragraph-early{
+    padding: 0 40px;
+    font-size: 15px;
+    font-weight: normal;
+    color:white;
 }
