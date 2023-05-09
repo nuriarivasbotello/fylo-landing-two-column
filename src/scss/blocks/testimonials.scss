@@ -1,0 +1,21 @@
+@use '../mixins/responsive.scss' as *;
+.testimonial{
+    width: 280px;
+    margin:50px auto;
+    border-radius:0.3rem;
+    background-color: white;
+    &__paragraph{
+        font-family:var(--font-title);
+        color:var(--color-primary);
+        font-size: 13px;
+        
+    }
+    @include responsive(desktop) {
+        width: 356px;
+        height: 215px;
+        margin:0;
+        padding: 40px;
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+}

@@ -1,0 +1,32 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/pseudo.scss' as *;
+.productive{
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:100px auto;
+    background-color: rgba(248, 248, 254, 1);
+    &::after{
+        @include pseudo(400px, 100px){
+            top:778px;
+             background-repeat: no-repeat;
+             background-image: url(../assets/images/bg-curve-mobile.svg);
+        }
+
+       }
+    @include responsive(desktop) {
+        width: 1440px;
+        display: grid;
+       grid-template-columns: 50% 50%;
+       grid-template-rows: 50% 50%;
+        margin-top:150px;
+     &::after{
+        @include pseudo(1440px, 100px){
+            top:687px;
+            background-image: url(../assets/images/bg-curve-desktop.svg);
+        }
+     }
+    }
+
+}

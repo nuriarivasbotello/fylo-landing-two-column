@@ -1,0 +1,24 @@
+.founder{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    &__information{
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        margin-left:10px;
+    
+
+    }
+    &__name{
+        font-family:var(--font-title);
+        color:var(--color-primary);
+        font-size: 10px;
+        font-weight: bold;
+    }
+    &__job{
+        font-family:var(--font-title);
+        color:rgba(7, 4, 59, 0.539);
+        font-size: 8px;
+}
+}

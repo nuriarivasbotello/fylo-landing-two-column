@@ -1,4 +1,5 @@
 @use '../mixins/responsive.scss' as *;
+@use '../mixins/pseudo.scss' as *;
 .paragraph{
     color:var(--color-primary);
     font-family: var(--font-text);
@@ -7,4 +8,28 @@
     @include responsive(desktop) {
         text-align: left;
     }
+}
+.paragraph-productive{
+color:var(--color-secondary);
+font-size: 17px;
+font-family:var(--font-title);
+}
+.link{
+    color:var(--color-link);
+    margin:auto;
+    font-family:var(--font-title);
+    font-size: 15px;
+    &::before{
+        @include pseudo(400px, 200px){
+            color: var(--color-link);
+        }
+     }
+    &::after{
+        @include pseudo(400px, 100px){
+            top:1419px;
+            left:285px;
+             background-repeat: no-repeat;
+             background-image: url(../assets/images/icon-arrow.svg);
+        }
+     }
 }

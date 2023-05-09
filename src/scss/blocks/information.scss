@@ -1,0 +1,8 @@
+@use '../mixins/responsive.scss' as *;
+.information{
+
+    @include responsive(desktop) {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+}
