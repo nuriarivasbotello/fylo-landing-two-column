@@ -1,58 +1,61 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/pseudo.scss' as *;
-.paragraph{
-    color:var(--color-primary);
-    font-family: var(--font-text);
-    text-align: center;
-    font-size: 20px;
-    @include responsive(desktop) {
-        text-align: left;
+.paragraph {
+  color: var(--color-primary);
+  font-family: var(--font-text);
+  text-align: center;
+  font-size: 20px;
+  @include responsive(desktop) {
+    text-align: left;
+  }
+}
+.paragraph-productive {
+  color: var(--color-secondary);
+  font-size: 17px;
+  font-family: var(--font-title);
+}
+.link {
+  position: relative;
+  color: var(--color-link);
+  margin: auto;
+  font-family: var(--font-title);
+  font-size: 15px;
+  padding-left: 100px;
+  &::before {
+    @include pseudo(140px, 3px) {
+      top: 20px;
+      background-color: var(--color-link);
     }
-}
-.paragraph-productive{
-color:var(--color-secondary);
-font-size: 17px;
-font-family:var(--font-title);
-}
-.link{
-    color:var(--color-link);
-    margin:auto;
-    font-family:var(--font-title);
-    font-size: 15px;
-    padding-left:100px;
-    &::before{
-        @include pseudo(400px, 100px){
-            color: var(--color-link);
-        }
-     }
-    &::after{
-        @include pseudo(400px, 100px){
-            top:1340px;
-            left:270px;
-             background-repeat: no-repeat;
-             background-image: url(../assets/images/icon-arrow.svg);
-        }
-     }
-     @include responsive(desktop) {
-        text-align: left;
-        &::before{
-            @include pseudo(400px, 200px){
-                color: var(--color-link);
-            }
-         }
-        &::after{
-            @include pseudo(400px, 100px){
-                top:1100px;
-                left:370px;
-                 background-repeat: no-repeat;
-                 background-image: url(../assets/images/icon-arrow.svg);
-            }
-         }
+  }
+  &::after {
+    @include pseudo(400px, 100px) {
+      top: 4px;
+      left: 240px;
+      background-repeat: no-repeat;
+      background-image: url(../assets/images/icon-arrow.svg);
     }
+  }
+  @include responsive(desktop) {
+    text-align: left;
+    &::before {
+      @include pseudo(140px, 3px) {
+        top: 20px;
+        background-color: var(--color-link);
+      }
+    }
+    &::after {
+      @include pseudo(400px, 100px) {
+        top: 4px;
+        left: 240px;
+        background-repeat: no-repeat;
+        background-image: url(../assets/images/icon-arrow.svg);
+      }
+    }
+  }
 }
-.paragraph-early{
-    padding: 0 40px;
-    font-size: 15px;
-    font-weight: normal;
-    color:white;
+.paragraph-early {
+  padding: 0 40px;
+  font-size: 15px;
+  font-weight: normal;
+  color: white;
 }
